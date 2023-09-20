@@ -1,4 +1,13 @@
 @import './fonts.css';
+
+:root {
+    --primary-bg-color: #a569475d;
+    --accent-color: #573a3a;
+    --button-bg-color: #573a3a;
+    --button-text-color: #fff;
+    --button-shadow-color: #00000033;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -24,59 +33,59 @@
 .slide {
     flex: 0 0 100%;
     padding: 100px;
-    background-color: #a569475d;
+    background-color: var(--primary-bg-color);
     position: relative;
     transform: scale(.7);
     transition: transform .3s ease-in-out;
     will-change: transform;
     z-index: 1;
-	box-shadow: 10px 10px 0px 0px #573a3a;
+    box-shadow: 10px 10px 0px 0px var(--accent-color);
 }
 .slide.active {
     transform: scale(1);
 }
-.title{
+.title {
     font-size: 34px;
     font-weight: 600;
     max-width: 600px;
     margin-bottom: 1rem;
-    color: #573a3a;
+    color: var(--accent-color);
 }
-.subtitle{
+.subtitle {
     font-size: 16px;
     font-weight: 500;
     max-width: 600px;
     margin-bottom: 1rem;
-    color: #573a3a;
+    color: var(--accent-color);
 }
 .slider-button {
     position: absolute;
     top: 100%;
     margin-top: 50px;
-    background-color: #573a3a;
+    background-color: var(--button-bg-color);
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-	box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.2);
-	color: #fff;
-	text-align: center;
-	font-weight: 600;
-	line-height: 120%;
-	text-decoration: none;
-	transition: transform 0.2s, box-shadow 0.2s;
-	will-change: transform;
+    box-shadow: 6px 6px 0px 0px var(--button-shadow-color);
+    color: var(--button-text-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 120%;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    will-change: transform;
 }
 .slider-button:hover {
     transform: translateY(-4px);
-    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 10px 10px 0px 0px var(--button-shadow-color);
 }
 .slider-button:active {
-    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 6px 6px 0px 0px var(--button-shadow-color);
     transform: translateY(0);
 }
 #prevBtn {
     left: 15px;
 }
 #nextBtn {
-    right: 15px
+    right: 15px;
 }
